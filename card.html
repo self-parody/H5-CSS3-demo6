@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 翻页卡片 */
+        .box{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+            margin: 100px;
+            perspective: 700px;
+            float: left;
+        }     
+        .box img{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            display: block;
+            border-radius: 50%;          
+        }
+        .box .two{
+            transform-origin: bottom;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+        .box:hover .two{
+            transform: rotateX(-180deg);
+        }
+
+        /* 产品介绍 */
+        .box2{
+            margin: 100px;
+            height: 270px;
+            width: 200px;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+        .box2 img{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;     
+        }
+        .box2 .des{
+            width: 200px;
+            height: 60px;
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            background-color: pink;
+            transition: all 0.4s;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: rgb(84, 70, 163);
+        }
+        .box2:hover {
+            box-shadow: 0 0 8px rgb(167, 126, 133);
+        }
+        .box2:hover .des{
+            bottom: 0;
+        }
+
+        /* 阴影遮盖 */
+        .box3{
+            margin: 100px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+        }
+        .box3 img{
+            display: block;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box3 div{
+            width: 200px;
+            height: 200px;
+            background-color:rgba(0, 0, 0, 0.5);
+            position: absolute;
+            transition: all 0.6s;
+        }
+        .box3 .lt{
+            left: -200px;
+            top: -200px;
+        }
+        .box3 .rt{
+            right: -200px;
+            top: -200px;
+        }
+        .box3 .lb{
+            left: -200px;
+            bottom: -200px;
+        }
+        .box3 .rb{
+            right: -200px;
+            bottom: -200px;
+        }
+        .box3 .w{
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.6s;
+            color: #fff;
+        }
+        .box3:hover .lt{
+            transform: translateX(100px) translateY(100px);
+        }
+        .box3:hover .rt{
+            transform: translateX(-100px) translateY(100px);
+        }
+        .box3:hover .lb{
+            transform: translateX(100px) translateY(-100px);
+        }
+        .box3:hover .rb{
+            transform: translateX(-100px) translateY(-100px);
+        }
+        .box3:hover .w{
+            transform: translateX(-50%) translateY(-190px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="con">
+            <img src="../image/方形2.jpg" alt="" class="one">
+            <img src="../image/方形1.png" alt="" class="two">
+        </div>       
+    </div>
+
+    <div class="box2">
+        <img src="../image/nvwu-removebg-preview.png" alt="">
+        <div class="des">带来快乐和食欲的小女巫kk和她的伙伴vv</div>
+    </div>
+
+    <div class="box3">
+        <img src="../image/9.jpg" alt="">
+        <div class="lt"></div>
+        <div class="rt"></div>
+        <div class="lb"></div>
+        <div class="rb"></div>
+        <span class="w">妮可7737-A</span>
+    </div>
+</body>
+</html>
