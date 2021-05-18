@@ -131,6 +131,33 @@
         .box3:hover .w{
             transform: translateX(-50%) translateY(-190px);
         }
+        
+        .box4{
+            float: left;
+            width: 180px;
+            height: 270px;
+            margin: 100px;
+        }
+        .box4 div{
+            width: 100%;
+            height: 100%;
+            background: url("img/callme.jpg") no-repeat;
+        }
+        .box4 .shadow{  
+            transform: rotateX(180deg);
+            position: relative;
+        }
+        /*用遮罩层实现渐变阴影效果*/
+        .box4 .shadow::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(white 60%,rgba(255,255,255,0.9) 80%,rgba(255,255,255,0.5) 100%);
+        }
     </style>
 </head>
 <body>
@@ -153,6 +180,11 @@
         <div class="lb"></div>
         <div class="rb"></div>
         <span class="w">妮可7737-A</span>
+    </div>
+    
+     <div class="box4">
+        <div class="front"></div>
+        <div class="shadow"></div> 
     </div>
 </body>
 </html>
