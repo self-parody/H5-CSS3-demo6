@@ -192,6 +192,59 @@
         .box5:hover .inside::before{        
             transform:rotateY(-150deg);
         }
+        
+        /*文字卡片*/
+        .box6{
+            position:relative;
+            width: 180px;
+            height: 270px;
+            margin: 100px;
+            float:left;
+        }
+        .box6 img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .box6 .content{
+            width: 80%;
+            height: 40px;
+            position: absolute;
+            bottom: 20px;
+            left: 10%;     
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(3px);
+            box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.5),1px 1px 2px rgba(50, 50, 50, 0.5);                    
+            border-radius: 3px;
+            color: #bcdef8;
+            transition: all 0.5s 0.1s;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .box6 .content h3{         
+            line-height: 40px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        .box6 .content p{
+            opacity: 0;
+            font-size: 13px;
+            line-height: 1.2em;
+            transition: all 1s ease-in;
+        }    
+        .box6:hover .content{
+            width: 100%;
+            height: 100%;
+            padding: 15px;   
+            bottom: 0;
+            left: 0;
+            box-shadow: none;                 
+        }
+        .box6:hover .content>p{
+            opacity: 1;
+        }
+      
     </style>
 </head>
 <body>
@@ -224,5 +277,17 @@
     <div class="box5">
         <div class="inside"></div>
     </div>
+    
+    <div class="box6">
+        <img src="img/callme.jpg" alt="">
+        <div class="content">
+            <h3>Call Me by Your Name</h3>
+            <p>&emsp;&emsp;怎么过一生是自己的事情，记住，我们的心灵和身体只被赋予了一次，<br>
+                &emsp;&emsp;你的心灵会疲惫和蒙尘；你的身体会衰老，直到没有人会再多看一眼，更别说有人会喜欢，<br>
+                &emsp;&emsp;你现在感受到难过，痛苦，别让他消失，更别说那些曾经的快乐。
+            </p>
+        </div>
+    </div>
+    
 </body>
 </html>
